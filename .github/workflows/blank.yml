@@ -1,14 +1,17 @@
 name: Newman Run
 
 on: [push, pull_request]
-
-  
-
+ 
+ 
 jobs:
   newman:
     runs-on: ubuntu-latest
+    id: run-newman
+  uses: anthonyvscode/newman-action@v1
     steps:
-      -uses: newman run "C:\Users\Pavel\Desktop\Новая папка (3)\Trello_Pavel.postman_collection.json" -e "C:\Users\Pavel\Desktop\Новая папка (3)\Board.postman_environment.json"
-
+      -uses: newman run "postman_collection.json" -e "postman_environment.json"
+       - uses: matt-ball/newman-action@main
+       - uses: actions/checkout@main
         with:
           collection: postman_collection.json
+          reporters: cli
