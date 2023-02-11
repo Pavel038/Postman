@@ -1,15 +1,14 @@
 name: Newman Run
 
-on:
-  pull_request:
-    branches:
-    - main
+on: [push, pull_request]
+
+  
 
 jobs:
   newman:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@main
-      - uses: matt-ball/newman-action@main
+      -uses: newman run "C:\Users\Pavel\Desktop\Новая папка (3)\Trello_Pavel.postman_collection.json" -e "C:\Users\Pavel\Desktop\Новая папка (3)\Board.postman_environment.json"
+
         with:
           collection: postman_collection.json
