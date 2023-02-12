@@ -17,8 +17,7 @@ jobs:
       with:
         collection: collection.json
         reporters: cli
+        run: newman
 
-    - name: Output summary to console
-      run: newman run "Trello_Pavel.postman_collection.json"
-
+  
 
