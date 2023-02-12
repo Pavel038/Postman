@@ -20,6 +20,6 @@ jobs:
         reporters: cli
 
     - name: Output summary to console
-      run: newman run "postman_collection.json" -e "postman_environment.json" 
+      run: newman run "postman_collection.json"  
 
 
