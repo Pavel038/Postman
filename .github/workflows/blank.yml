@@ -18,6 +18,10 @@ jobs:
         collection: collection.json
         reporters: cli
         run: newman run "Trello_Pavel.postman_collection.json"
+        
+    - name: Run Tests
+      run: newman run "Trello_Pavel.postman_collection.json"
+     
 
   
 
