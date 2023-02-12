@@ -20,7 +20,6 @@ jobs:
         reporters: cli
 
     - name: Output summary to console
-      run: newman run "C:\Users\Pavel\Desktop\Новая папка (3)\Trello_Pavel.postman_collection.json" -e "C:\Users\Pavel\Desktop\Новая папка (3)\Board.postman_environment.json" --reporters htmlextra --reporter-htmlextra-export "result_html.html"
-
+      run: newman run "postman_collection.json" -e "postman_environment.json" 
 
 
