@@ -4,19 +4,11 @@ on: [push, pull_request]
 
 jobs:
    build:
-
-    runs-on: ubuntu-latest
-  
-  
-    steps:
-       - uses: actions/checkout@master
-       - uses: matt-ball/newman-action@master
-         with:
-            collection: Trello_Pavel.postman_collection.json
-            environment: Board.postman_environment.json
-       
-       - name: dfdsffew
-         run: newman run  :"Trello_Pavel.postman_collection.json" --reporters cli   
+      runs-on: ubuntu-latest
+      steps:
+         - uses: actions/checkout@v3
+         - name: dfdsffew
+           run: newman run  :"Trello_Pavel.postman_collection.json" --reporters cli   
      
 
   
