@@ -19,6 +19,6 @@ jobs:
         reporters: cli
 
     - name: Output summary to console
-      run: newman run "Trello_Pavel.postman_collection.json" -e "Board.postman_environment.json" 
+      run: newman run "Trello_Pavel.postman_collection.json"
 
 
