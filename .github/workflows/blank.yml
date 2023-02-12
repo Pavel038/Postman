@@ -12,8 +12,8 @@ jobs:
       - uses: actions/checkout@master
       - uses: matt-ball/newman-action@master
         with:
-          collection: postman_collection.json
-          environment: postman_environment.json
+          collection: Trello_Pavel.postman_collection.json
+          environment: Board.postman_environment.json
 
      
 
