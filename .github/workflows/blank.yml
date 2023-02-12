@@ -9,8 +9,8 @@ jobs:
   
   
     steps:
-      - uses: actions/checkout@master
-      - uses: matt-ball/newman-action@master
+      - uses: actions/checkout@main
+      - uses: matt-ball/newman-action@main
         with:
           collection: Trello_Pavel.postman_collection.json
           environment: Board.postman_environment.json
