@@ -8,7 +8,7 @@ jobs:
       steps:
          - uses: actions/checkout@v3
          - name: dfdsffew
-           run: newman run  :"Trello_Pavel.postman_collection.json" --reporters cli   
+           run: newman run "Trello_Pavel.postman_collection.json" --reporters cli   
      
 
   
