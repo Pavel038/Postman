@@ -9,8 +9,7 @@ jobs:
   
   
     steps:
-    - name: Checkout
-      uses: actions/checkout@v1
+   
 
     - name: Run API Tests
       id: run-newman
@@ -20,6 +19,6 @@ jobs:
         reporters: cli
 
     - name: Output summary to console
-      run: newman run "Trello_Pavel.postman_collection.json"  
+      run: newman run "Trello_Pavel.postman_collection.json" -e "Board.postman_environment.json" 
 
 
