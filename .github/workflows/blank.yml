@@ -9,19 +9,14 @@ jobs:
   
   
     steps:
-     - name: Checkout
-       uses: actions/checkout@v1
-
-     - name: Run API Tests
-       id: run-newman
-       uses: anthonyvscode/newman-action@v1
-       with:
-          collection: https://github.com/Pavel038/Postman
-          reporters: cli
-
-     - name: Output summary to console
-       run: echo ${{ steps.run-newman.outputs.summary }}
-
+       - uses: actions/checkout@master
+       - uses: matt-ball/newman-action@master
+         with:
+            collection: Trello_Pavel.postman_collection.json
+            environment: Board.postman_environment.json
+       
+       - name: dfdsffew
+         run: newman run  :"Trello_Pavel.postman_collection.json" --reporters cli   
      
 
   
