@@ -7,8 +7,6 @@ jobs:
       runs-on: ubuntu-latest
       steps:
          - uses: actions/checkout@v3
-         - name: dsvdsvdsvds
-           run: run npm install newman-reporter-html
          - name: Run_collection
            run: newman run Trello_Pavel.postman_collection.json -e Board.postman_environment.json --reporters cli,htmlextra 
 
