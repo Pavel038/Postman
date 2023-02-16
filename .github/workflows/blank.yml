@@ -7,10 +7,6 @@ jobs:
       runs-on: ubuntu-latest
       steps:
          - uses: actions/checkout@v3
-         - name: sdvsdv
-           run: npm i --package-lock-only
-         - name: dsv
-           run: npm audit
          - name: Run_collection
            run: newman run Trello_Pavel.postman_collection.json -e Board.postman_environment.json --reporters cli,html
  
