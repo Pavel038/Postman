@@ -8,7 +8,7 @@ jobs:
       steps:
          - uses: actions/checkout@v3
          - name : fdvs
-           run: npm install source-map-resolve
+           run: npm install urix
          - name: install 
            run: npm install -g newman-reporter-htmlextra
          - name: Run_collection
