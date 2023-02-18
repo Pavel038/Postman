@@ -8,7 +8,7 @@ jobs:
       steps:
          - uses: actions/checkout@v3
          - name : fdvs
-           run: npm install urix
+           run: ls
          - name: install 
            run: npm install newman-reporter-html
          - name: Run_collection
