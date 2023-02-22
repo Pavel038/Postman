@@ -3,17 +3,18 @@ name: Newman Run
 on: 
    workflow_dispatch:
    schedule:
-      - cron: '00 6 * * 1-5'
+     - cron: '00 6 * * 1-5'
 
 jobs:
    build:
       runs-on: ubuntu-latest
+      
       steps:
          - uses: actions/checkout@v3
          - name: install 
            run: npm install -g newman-reporter-htmlextra
          - name: Run_collection
-           run: 'newman run Trello_Pavel.postman_collection.json -e Board.postman_environment.json --reporters cli,htmlextra --reporter-htmlextra-export testResults/result_html.html'
+           run: newman run Trello_Pavel.postman_collection.json -e Board.postman_environment.json --reporters cli,htmlextra --reporter-htmlextra-export testResults/result_html.html
          - name : ls
            run: ls 
          - name: publish test results
