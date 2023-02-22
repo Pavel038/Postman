@@ -10,7 +10,8 @@ jobs:
       runs-on: ubuntu-latest
       
       steps:
-         - uses: actions/checkout@v3
+         - name: checkout
+           uses: actions/checkout@v3
          
          - name: install 
            run: npm install -g newman-reporter-htmlextra
