@@ -16,7 +16,7 @@ jobs:
          - name: Run_collection
            run: newman run Trello_Pavel.postman_collection.json -e Board.postman_environment.json --reporters cli,htmlextra --reporter-htmlextra-export result_html.html
        
-         - name : l
+         - name : ls
            run: ls 
         
            
