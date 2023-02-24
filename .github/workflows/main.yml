@@ -1,7 +1,6 @@
 name: Newman Run
 
 on: 
-   workflow_dispatch:
    schedule:
          - cron: '30 5 * * 1,3'
   
