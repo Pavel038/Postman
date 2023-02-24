@@ -6,27 +6,21 @@ on:
          - cron: '30 5 * * 1,3'
   
 
+name: Newman Run
+
+on: [push, pull_request]
+
 jobs:
    build:
       runs-on: ubuntu-latest
-      
       steps:
          - uses: actions/checkout@v3
-         
          - name: install 
            run: npm install -g newman-reporter-htmlextra
-         
          - name: Run_collection
            run: newman run Trello_Pavel.postman_collection.json -e Board.postman_environment.json --reporters cli,htmlextra --reporter-htmlextra-export result_html.html
-         
-         - name : ls
+         - name : fdvs
            run: ls 
-           
-         - uses: actions/upload-artifact@v3
-           with:
-              name: reports
-              path: testResults/
-           
          
         
            
